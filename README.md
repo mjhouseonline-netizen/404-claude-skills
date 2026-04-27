@@ -1,6 +1,6 @@
 # Claude Skills 404 GitHub Ready
 
-This repository-ready folder is a cleaned export of the original `starter-bundle`.
+This repository contains the 404-skill package set in Claude-skills layout.
 
 ## Structure
 
@@ -9,7 +9,6 @@ This repository-ready folder is a cleaned export of the original `starter-bundle
 ## Cleanup Applied
 
 - converted all source files into one-package-per-folder layout
-- excluded packages with obvious merge-conflict markers
 - normalized package frontmatter to include:
   - `name`
   - `description`
@@ -19,13 +18,11 @@ This repository-ready folder is a cleaned export of the original `starter-bundle
 
 ## Counts
 
-- `404` packages kept
-- `16` packages excluded
+- `404` packages
 
 ## Files
 
-- `skills/`: cleaned package folders
-- `cleanup-report.csv`: kept/excluded status for every imported item
+- `skills/`: package folders
 
 ## Important Notes
 
