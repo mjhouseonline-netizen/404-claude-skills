@@ -4,7 +4,14 @@ This repository contains the 404-skill package set in Claude-skills layout.
 
 ## Structure
 
-- `skills/<skill-name>/SKILL.md`
+- `skills-pack-01/<skill-name>/SKILL.md`
+- `skills-pack-02/<skill-name>/SKILL.md`
+- `skills-pack-03/<skill-name>/SKILL.md`
+- `skills-pack-04/<skill-name>/SKILL.md`
+- `skills-pack-05/<skill-name>/SKILL.md`
+- `skills-pack-06/<skill-name>/SKILL.md`
+- `skills-pack-07/<skill-name>/SKILL.md`
+- `skills-pack-08/<skill-name>/SKILL.md`
 
 ## Cleanup Applied
 
@@ -22,7 +29,12 @@ This repository contains the 404-skill package set in Claude-skills layout.
 
 ## Files
 
-- `skills/`: package folders
+- `skills-pack-01` through `skills-pack-08`: package folders split into smaller GitHub-importable groups
+
+## Using With Claude
+
+- add one `skills-pack-*` folder at a time from GitHub
+- if one pack is still too large in Claude's picker, open that pack and select smaller subsets inside it
 
 ## Important Notes
 
