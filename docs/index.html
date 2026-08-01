@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and download 404 reusable Claude skills from Skill & Soul Studio.">
+  <title>Claude Skills Library | Skill & Soul Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">S&amp;S</span><span><strong>Skill Hub</strong><small>by Skill &amp; Soul Studio</small></span></a>
+    <nav><a href="#library">Browse</a><a href="#install">Install guide</a><a href="#safety">Safety</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow-one"></div><div class="hero-glow hero-glow-two"></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Claude skills, ready to download</p>
+        <h1>Find the right skill.<br><span>Teach Claude once.</span></h1>
+        <p class="hero-text">Browse 404 reusable skills for business, creative work, development, automation and more. Download one skill at a time as a Claude-ready ZIP file.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#library">Browse all skills</a><a class="button button-secondary" href="#install">How to install</a></div>
+      </div>
+      <div class="hero-stats"><div><strong id="skill-total">404</strong><span>Skills</span></div><div><strong id="category-total">10</strong><span>Categories</span></div><div><strong>ZIP</strong><span>Claude-ready</span></div></div>
+    </section>
+    <section class="library-section" id="library">
+      <div class="section-heading"><div><p class="eyebrow">Search the library</p><h2>Choose one skill for the task in front of you</h2></div><p id="result-count">Loading skills...</p></div>
+      <div class="search-wrap"><span>⌕</span><label class="sr-only" for="skill-search">Search skills</label><input id="skill-search" type="search" placeholder="Search by skill, task or topic..."><button id="clear-search" hidden>Clear</button></div>
+      <div class="category-list" id="categories" aria-label="Filter skills by category"></div>
+      <div class="skill-grid" id="skill-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><strong>No matching skills found</strong><p>Try a shorter search or choose a different category.</p><button id="reset-filters">Reset filters</button></div>
+      <button class="load-more" id="load-more" hidden>Show more skills</button>
+    </section>
+    <section class="guide-section" id="install">
+      <div class="section-heading guide-heading"><div><p class="eyebrow">Four simple steps</p><h2>Install a skill in Claude</h2></div><p>Upload the ZIP file without unzipping it.</p></div>
+      <ol class="steps"><li><span>01</span><div><strong>Download</strong><p>Choose a skill and click Download ZIP.</p></div></li><li><span>02</span><div><strong>Open Skills</strong><p>In Claude, go to Customize, then Skills.</p></div></li><li><span>03</span><div><strong>Upload</strong><p>Click +, Create skill, Upload a skill, then select the ZIP.</p></div></li><li><span>04</span><div><strong>Enable and test</strong><p>Turn the skill on and give Claude a matching task.</p></div></li></ol>
+    </section>
+    <section class="safety-section" id="safety"><div><p class="eyebrow">Use skills carefully</p><h2>Check before you install</h2><p>Skills can contain instructions and scripts. Review the source, install only what you need and never add passwords, private keys or sensitive personal information to a skill.</p></div><div class="notice"><strong>Library notice</strong><p>This collection has been organised into Claude skill folders, but it has not received a complete security, licensing or editorial review. You are responsible for reviewing a skill before using or distributing it.</p></div></section>
+  </main>
+  <footer><div class="brand footer-brand"><span class="brand-mark">S&amp;S</span><span><strong>Skill Hub</strong><small>Skill &amp; Soul Studio</small></span></div><p>404 reusable Claude skills, organised and ready to explore.</p><a href="#top">Back to top ↑</a></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
