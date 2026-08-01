@@ -1,42 +1,57 @@
-# Claude Skills 404 GitHub Ready
+# Claude Skills Library
 
-This repository contains the 404-skill package set in Claude-skills layout.
+A searchable Skill & Soul Studio library containing 404 reusable Claude skills.
 
-## Structure
+The website lets visitors:
 
-- `skills-pack-01/<skill-name>/SKILL.md`
-- `skills-pack-02/<skill-name>/SKILL.md`
-- `skills-pack-03/<skill-name>/SKILL.md`
-- `skills-pack-04/<skill-name>/SKILL.md`
-- `skills-pack-05/<skill-name>/SKILL.md`
-- `skills-pack-06/<skill-name>/SKILL.md`
-- `skills-pack-07/<skill-name>/SKILL.md`
-- `skills-pack-08/<skill-name>/SKILL.md`
+- search all 404 skills by name, task, description, or topic
+- filter skills by category
+- download one Claude-ready ZIP file at a time
+- review the source folder before installing
+- follow current installation and safety guidance
 
-## Cleanup Applied
+## Install a skill in Claude
 
-- converted all source files into one-package-per-folder layout
-- normalized package frontmatter to include:
-  - `name`
-  - `description`
-  - `source_group`
-  - `imported_from`
-- preserved original content after the normalized frontmatter
+1. Download one skill ZIP from the library.
+2. Leave the downloaded file zipped.
+3. In Claude, open **Customize > Skills**.
+4. Click **+ > Create skill > Upload a skill**.
+5. Select the ZIP file.
+6. Enable the skill and test it with a task that matches its purpose.
 
-## Counts
+## Repository structure
 
-- `404` packages
+- `app/`: website interface and generated skill metadata
+- `public/downloads/`: 404 individual skill ZIP files
+- `skills-pack-01` through `skills-pack-08`: source skill folders
+- `scripts/build-skill-library.mjs`: rebuilds metadata and ZIP downloads from the source folders
 
-## Files
+## Run locally
 
-- `skills-pack-01` through `skills-pack-08`: package folders split into smaller GitHub-importable groups
+```bash
+npm install
+npm run dev
+```
 
-## Using With Claude
+## Rebuild the library files
 
-- add one `skills-pack-*` folder at a time from GitHub
-- if one pack is still too large in Claude's picker, open that pack and select smaller subsets inside it
+After adding or editing a skill, run:
 
-## Important Notes
+```bash
+node scripts/build-skill-library.mjs .
+```
 
-- this is a structural and metadata cleanup, not a full editorial or legal review
-- some packages may still need content refinement, deduplication, or licensing review before public distribution
+Then confirm the reported count before committing the regenerated metadata and downloads.
+
+## Validation
+
+```bash
+npm run lint
+npm run build
+```
+
+## Important notice
+
+This collection has been organised into Claude skill folders, but it has not received a complete security, licensing, or editorial review.
+
+Skills may contain instructions or scripts. Review the source before installing, install only skills you trust, and never place passwords, API keys, private credentials, or sensitive personal information inside a skill.
