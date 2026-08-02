@@ -1,8 +1,6 @@
 ---
 name: ads-plan
 description: >
-source_group: skills
-imported_from: ads-plan.md
   Strategic paid advertising planning with industry-specific templates.
   Covers platform selection, campaign architecture, budget planning,
   creative strategy, and phased implementation roadmap. Use when user says
@@ -52,23 +50,23 @@ Example: `META_CONV_Prospecting_US_2026Q1`
 #### Campaign Structure Template
 ```
 Account
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Brand Campaign (always-on, protect brand terms)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Non-Brand Prospecting
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Campaign 1: [Top Funnel - Awareness]
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 1: [Audience A]
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 2: [Audience B]
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Campaign 2: [Mid Funnel - Consideration]
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 1: [Interest-based]
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 2: [Lookalike/Similar]
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Campaign 3: [Bottom Funnel - Conversion]
-Ã¢â€â€š       Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 1: [High-intent]
-Ã¢â€â€š       Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Ad Group/Set 2: [Custom audience]
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Retargeting
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Website Visitors (7-30 days)
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Engaged Users (video views, social engagement)
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Cart Abandoners / Form Starters
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Testing
-    Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ New audiences, formats, or messaging
+├── Brand Campaign (always-on, protect brand terms)
+├── Non-Brand Prospecting
+│   ├── Campaign 1: [Top Funnel - Awareness]
+│   │   ├── Ad Group/Set 1: [Audience A]
+│   │   └── Ad Group/Set 2: [Audience B]
+│   ├── Campaign 2: [Mid Funnel - Consideration]
+│   │   ├── Ad Group/Set 1: [Interest-based]
+│   │   └── Ad Group/Set 2: [Lookalike/Similar]
+│   └── Campaign 3: [Bottom Funnel - Conversion]
+│       ├── Ad Group/Set 1: [High-intent]
+│       └── Ad Group/Set 2: [Custom audience]
+├── Retargeting
+│   ├── Website Visitors (7-30 days)
+│   ├── Engaged Users (video views, social engagement)
+│   └── Cart Abandoners / Form Starters
+└── Testing
+    └── New audiences, formats, or messaging
 ```
 
 ### 5. Budget Planning
@@ -120,27 +118,27 @@ Before launching any ads, ensure tracking is configured:
 
 ### 8. Implementation Roadmap
 
-#### Phase 1 Ã¢â‚¬â€ Foundation (Weeks 1-2)
+#### Phase 1 — Foundation (Weeks 1-2)
 - Install all tracking pixels and server-side tracking
 - Set up conversion events and goals
 - Create campaign structure and naming conventions
 - Build initial audiences (custom, lookalike/predictive)
 - Produce first batch of creative assets
 
-#### Phase 2 Ã¢â‚¬â€ Launch (Weeks 3-4)
+#### Phase 2 — Launch (Weeks 3-4)
 - Launch campaigns on primary platform(s) first
 - Set conservative budgets and bidding (Maximize Clicks / Lowest Cost)
 - Monitor daily for the first 7 days
 - Verify conversion tracking is firing correctly
 
-#### Phase 3 Ã¢â‚¬â€ Optimize (Weeks 5-8)
+#### Phase 3 — Optimize (Weeks 5-8)
 - Analyze initial data (minimum 2 weeks of data)
 - Adjust bidding strategies based on conversion volume
 - Kill underperforming ad groups/creatives (3x Kill Rule)
 - Launch secondary platforms
 - Begin A/B testing (creative, landing pages, audiences)
 
-#### Phase 4 Ã¢â‚¬â€ Scale (Weeks 9-12)
+#### Phase 4 — Scale (Weeks 9-12)
 - Scale winning campaigns (20% rule)
 - Expand to testing platforms (10% budget)
 - Implement advanced strategies (ABM, Shopping feeds, Smart+)
@@ -149,27 +147,27 @@ Before launching any ads, ensure tracking is configured:
 ## Industry Templates
 
 Load from `assets/` directory based on detected or specified business type:
-- `saas.md` Ã¢â‚¬â€ SaaS companies
-- `ecommerce.md` Ã¢â‚¬â€ E-commerce stores
-- `local-service.md` Ã¢â‚¬â€ Local service businesses
-- `b2b-enterprise.md` Ã¢â‚¬â€ B2B enterprise
-- `info-products.md` Ã¢â‚¬â€ Info products and courses
-- `mobile-app.md` Ã¢â‚¬â€ Mobile app companies
-- `real-estate.md` Ã¢â‚¬â€ Real estate
-- `healthcare.md` Ã¢â‚¬â€ Healthcare
-- `finance.md` Ã¢â‚¬â€ Financial services
-- `agency.md` Ã¢â‚¬â€ Marketing agencies
-- `generic.md` Ã¢â‚¬â€ General business template
+- `saas.md` — SaaS companies
+- `ecommerce.md` — E-commerce stores
+- `local-service.md` — Local service businesses
+- `b2b-enterprise.md` — B2B enterprise
+- `info-products.md` — Info products and courses
+- `mobile-app.md` — Mobile app companies
+- `real-estate.md` — Real estate
+- `healthcare.md` — Healthcare
+- `finance.md` — Financial services
+- `agency.md` — Marketing agencies
+- `generic.md` — General business template
 
 ## Output
 
 ### Deliverables
-- `ADS-STRATEGY.md` Ã¢â‚¬â€ Complete strategic advertising plan
-- `CAMPAIGN-ARCHITECTURE.md` Ã¢â‚¬â€ Campaign structure with naming conventions
-- `BUDGET-PLAN.md` Ã¢â‚¬â€ Budget allocation with monthly pacing
-- `CREATIVE-BRIEF.md` Ã¢â‚¬â€ Creative production plan with specifications
-- `TRACKING-SETUP.md` Ã¢â‚¬â€ Tracking implementation checklist
-- `IMPLEMENTATION-ROADMAP.md` Ã¢â‚¬â€ Phased rollout timeline
+- `ADS-STRATEGY.md` — Complete strategic advertising plan
+- `CAMPAIGN-ARCHITECTURE.md` — Campaign structure with naming conventions
+- `BUDGET-PLAN.md` — Budget allocation with monthly pacing
+- `CREATIVE-BRIEF.md` — Creative production plan with specifications
+- `TRACKING-SETUP.md` — Tracking implementation checklist
+- `IMPLEMENTATION-ROADMAP.md` — Phased rollout timeline
 
 ### KPI Targets
 | Metric | Month 1 | Month 3 | Month 6 | Month 12 |
