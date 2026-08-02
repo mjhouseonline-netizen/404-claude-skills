@@ -1,8 +1,6 @@
 ---
-name: analytical-sql-patterns
+skill_name: analytical-sql-patterns
 description: Master analytical SQL with window functions, CTEs, ROLLUP, CUBE, GROUPING SETS, and lateral joins
-source_group: skills
-imported_from: analytical-sql-patterns.md
 category: Database & Data
 version: 1.0.0
 ---
