@@ -1,8 +1,6 @@
 ---
-name: api-authentication-patterns
+skill_name: API Authentication & Token Patterns
 description: Implement API keys, OAuth 2.0, mTLS, token rotation, rate limiting, and signature verification
-source_group: skills
-imported_from: api-authentication-patterns.md
 category: Advanced Security
 version: 1.0.0
 ---
