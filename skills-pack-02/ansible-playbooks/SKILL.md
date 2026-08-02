@@ -1,8 +1,6 @@
 ---
-name: ansible-playbooks
+skill_name: ansible-playbooks
 description: Ansible roles, handlers, vault, dynamic inventory, molecule testing
-source_group: skills
-imported_from: ansible-playbooks.md
 category: Cloud & DevOps
 version: 1.0.0
 ---
@@ -15,25 +13,25 @@ Organize Ansible playbooks as reusable roles.
 
 ```
 roles/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ webserver/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ defaults/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ main.yml
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ files/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ handlers/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ main.yml
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ meta/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ main.yml
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ tasks/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ main.yml
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ templates/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ nginx.conf.j2
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ vars/
-Ã¢â€â€š       Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ main.yml
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ database/
-    Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ defaults/
-    Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ handlers/
-    Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ tasks/
-    Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ templates/
+├── webserver/
+│   ├── defaults/
+│   │   └── main.yml
+│   ├── files/
+│   ├── handlers/
+│   │   └── main.yml
+│   ├── meta/
+│   │   └── main.yml
+│   ├── tasks/
+│   │   └── main.yml
+│   ├── templates/
+│   │   └── nginx.conf.j2
+│   └── vars/
+│       └── main.yml
+└── database/
+    ├── defaults/
+    ├── handlers/
+    ├── tasks/
+    └── templates/
 ```
 
 **tasks/main.yml**:

@@ -1,8 +1,6 @@
 ---
-name: ai-workflow-orchestration
-description: AI workflows: LangGraph, CrewAI, AutoGen Ã¢â‚¬â€ state machines, human-in-loop
-source_group: skills
-imported_from: ai-workflow-orchestration.md
+skill_name: ai-workflow-orchestration
+description: AI workflows: LangGraph, CrewAI, AutoGen — state machines, human-in-loop
 category: AI & LLM
 version: 1.0.0
 ---

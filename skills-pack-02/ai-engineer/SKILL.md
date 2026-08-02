@@ -1,8 +1,6 @@
 ---
 name: ai-engineer
 description: Build production-ready LLM applications, advanced RAG systems, and
-source_group: skills
-imported_from: ai-engineer.md
   intelligent agents. Implements vector search, multimodal AI, agent
   orchestration, and enterprise AI integrations. Use PROACTIVELY for LLM
   features, chatbots, AI agents, or AI-powered applications.

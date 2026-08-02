@@ -1,8 +1,6 @@
 ---
-name: analytics-and-tracking-setup
+skill_name: analytics-and-tracking-setup
 description: Master GA4 setup, Google Tag Manager, UTM parameters, funnel analysis, cohort analysis, and measurement planning
-source_group: skills
-imported_from: analytics-and-tracking-setup.md
 category: Analytics & Automation
 version: 1.0.0
 ---
@@ -24,7 +22,7 @@ All sites MUST use GA4.
 ### Key Differences
 
 UA (Old):
-- Session-based (pageview Ã¢â€ â€™ bounce)
+- Session-based (pageview → bounce)
 - Limited event tracking
 - User ID tracking complex
 
@@ -48,7 +46,7 @@ GA4: "What did users do? When did they convert?"
 ## GA4 Property Setup
 
 1. Go to: https://analytics.google.com
-2. Click "Create" Ã¢â€ â€™ Create account
+2. Click "Create" → Create account
 3. Account name: "Your Business Name"
 4. Property name: "Your Website"
 5. Reporting timezone: Your timezone (not UTC)
@@ -63,7 +61,7 @@ GA4: "What did users do? When did they convert?"
 
 In GA4:
 - Select property
-- Reports Ã¢â€ â€™ Realtime
+- Reports → Realtime
 - Visit your website
 - Should see visitor data appearing in realtime
 ```
@@ -79,8 +77,8 @@ In GA4:
 - Both: Track cross-platform
 
 Your site may have:
-- www.example.com Ã¢â€ â€™ One stream
-- app.example.com Ã¢â€ â€™ Separate stream (different domain)
+- www.example.com → One stream
+- app.example.com → Separate stream (different domain)
 
 ### User ID Tracking (Optional but recommended)
 
@@ -191,8 +189,8 @@ Via Google Tag Manager: Easy setup without code (see Part 4)
 
 ## Typical Setup
 
-Website Ã¢â€ â€™ GTM Container Ã¢â€ â€™ GA4 property
-              Ã¢â€ â€œ
+Website → GTM Container → GA4 property
+              ↓
               Tags (what to track)
               Triggers (when to track)
               Variables (what data to send)
@@ -228,7 +226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager -->
 ```
 
-5. Verify in GA4: Reports Ã¢â€ â€™ Realtime (should see data)
+5. Verify in GA4: Reports → Realtime (should see data)
 ```
 
 ### Track Button Clicks (Example)
@@ -249,7 +247,7 @@ In GTM:
    - Measurement ID: G-XXXXXXXX
    - Event Name: "sign_up"
 
-3. Connect: Trigger Ã¢â€ â€™ Tag
+3. Connect: Trigger → Tag
 
 4. Publish
 
@@ -347,7 +345,7 @@ Alternative tools:
 ```markdown
 ## Create Funnel Report
 
-GA4 Ã¢â€ â€™ Reports Ã¢â€ â€™ Funnel exploration
+GA4 → Reports → Funnel exploration
 
 Create funnel:
 - Step 1: page_view (all pages)
@@ -358,7 +356,7 @@ Create funnel:
 GA4 shows:
 - Users at each step
 - Drop-off between steps
-- Conversion rate (step 1 Ã¢â€ â€™ step 4)
+- Conversion rate (step 1 → step 4)
 
 Example:
 Step 1: 1,000 page views
@@ -377,8 +375,8 @@ Overall funnel conversion: 5%
 Total steps: 4
 Total conversion: 5%
 
-Biggest drop: Form start Ã¢â€ â€™ Form submit (50% drop)
-Ã¢â€ â€™ Form is hard to fill
+Biggest drop: Form start → Form submit (50% drop)
+→ Form is hard to fill
 
 Questions to investigate:
 1. Is form too long? (test shorter form)
@@ -387,7 +385,7 @@ Questions to investigate:
 4. Is trust low? (test adding testimonials above form)
 
 Second drop: Purchase step (20% from submit)
-Ã¢â€ â€™ Maybe checkout friction
+→ Maybe checkout friction
 
 Test:
 - Remove unnecessary fields
@@ -416,7 +414,7 @@ Example Cohort Report:
 
 March Cohort: 40% return after 1 week
 April Cohort: 35% return after 1 week
-Ã¢â€ â€™ April campaign quality lower (maybe cheaper traffic)
+→ April campaign quality lower (maybe cheaper traffic)
 ```
 
 ### Creating Cohorts in GA4
@@ -424,7 +422,7 @@ April Cohort: 35% return after 1 week
 ```markdown
 ## Build Cohort Comparison
 
-GA4 Ã¢â€ â€™ Reports Ã¢â€ â€™ Cohort Exploration
+GA4 → Reports → Cohort Exploration
 
 Cohort definition:
 - Cohort type: Date (when user first engaged)
@@ -443,7 +441,7 @@ Example output:
 | May Signup| 32%          | 20%          | 12%           |
 
 Insight: Each month's cohort retains better
-Ã¢â€ â€™ Product is improving OR onboarding is better
+→ Product is improving OR onboarding is better
 ```
 
 ## Part 8: Measurement Plan Template
@@ -456,7 +454,7 @@ Insight: Each month's cohort retains better
    Target: 100 signups/month
    Success metric: sign_up event
 
-2. Goal: Improve trial Ã¢â€ â€™ paid conversion
+2. Goal: Improve trial → paid conversion
    Target: 25% conversion rate
    Success metric: upgrade event
 
@@ -515,36 +513,36 @@ Monthly review:
 
 ```markdown
 ## Mistake 1: Not Installing GTM Properly
-Ã¢ÂÅ’ Missing noscript tag (40% of users on slow connections don't track)
-Ã¢Å“â€¦ Install both script and noscript tags
+❌ Missing noscript tag (40% of users on slow connections don't track)
+✅ Install both script and noscript tags
 
 ## Mistake 2: Too Many Custom Events
-Ã¢ÂÅ’ Track everything (data overload, slow site)
-Ã¢Å“â€¦ Track only key business metrics (sign-up, purchase, key features)
+❌ Track everything (data overload, slow site)
+✅ Track only key business metrics (sign-up, purchase, key features)
 
 ## Mistake 3: No Event Parameters
-Ã¢ÂÅ’ Send event with no details
+❌ Send event with no details
   gtag('event', 'purchase');
-Ã¢Å“â€¦ Send event with value
+✅ Send event with value
   gtag('event', 'purchase', { value: 99.99, currency: 'USD' });
 
 ## Mistake 4: Not Excluding Internal Traffic
-Ã¢ÂÅ’ Your own team visiting inflates metrics
-Ã¢Å“â€¦ Exclude your IP address (Admin Ã¢â€ â€™ Data Streams Ã¢â€ â€™ exclude internal traffic)
+❌ Your own team visiting inflates metrics
+✅ Exclude your IP address (Admin → Data Streams → exclude internal traffic)
 
 ## Mistake 5: Wrong Timezone
-Ã¢ÂÅ’ Report timezone different from business timezone
+❌ Report timezone different from business timezone
   (Reports say 10K visitors, but daily reports don't match)
-Ã¢Å“â€¦ Set timezone to your timezone in property settings
+✅ Set timezone to your timezone in property settings
 
 ## Mistake 6: No UTM Parameters
-Ã¢ÂÅ’ Traffic from campaigns unmarked
+❌ Traffic from campaigns unmarked
   (Can't tell if Google Ads or organic)
-Ã¢Å“â€¦ All external links use UTM (especially ads, emails)
+✅ All external links use UTM (especially ads, emails)
 
 ## Mistake 7: Not Setting Up Conversions
-Ã¢ÂÅ’ GA4 set up, but no goal tracking
-Ã¢Å“â€¦ Mark key events as conversions (Admin Ã¢â€ â€™ Conversions)
+❌ GA4 set up, but no goal tracking
+✅ Mark key events as conversions (Admin → Conversions)
 ```
 
 ## Part 10: Reporting Template
@@ -556,10 +554,10 @@ Monthly review:
 
 | Metric | Target | Actual | vs. Last Month | Status |
 |--------|--------|--------|----------------|--------|
-| Visitors | 10,000 | 8,500 | -15% | Ã¢Å¡Â Ã¯Â¸Â |
-| Signups | 100 | 85 | -15% | Ã¢Å¡Â Ã¯Â¸Â |
-| Trial to Paid | 25% | 22% | -3pp | Ã¢Å¡Â Ã¯Â¸Â |
-| MRR | $10K | $8.9K | -11% | Ã¢Å¡Â Ã¯Â¸Â |
+| Visitors | 10,000 | 8,500 | -15% | ⚠️ |
+| Signups | 100 | 85 | -15% | ⚠️ |
+| Trial to Paid | 25% | 22% | -3pp | ⚠️ |
+| MRR | $10K | $8.9K | -11% | ⚠️ |
 
 **Status**: Down from last month, needs investigation
 
@@ -597,24 +595,24 @@ Insight: Retention improving, onboarding working better
 
 ## Recommendations
 
-1. Traffic declining Ã¢â€ â€™ Audit paid ads, increase organic push
-2. Integrations unused Ã¢â€ â€™ Create tutorials, feature homepage
-3. March cohort better Ã¢â€ â€™ Analyze what changed, apply to April
+1. Traffic declining → Audit paid ads, increase organic push
+2. Integrations unused → Create tutorials, feature homepage
+3. March cohort better → Analyze what changed, apply to April
 ```
 
 ---
 
 ## Checklist: Analytics Setup Ready
 
-- Ã¢Å“â€œ GA4 property created and verified
-- Ã¢Å“â€œ Measurement ID added to website
-- Ã¢Å“â€œ GTM container installed (if applicable)
-- Ã¢Å“â€œ Key business events defined
-- Ã¢Å“â€œ UTM naming convention established
-- Ã¢Å“â€œ Email/ad campaigns using UTM parameters
-- Ã¢Å“â€œ Conversion goals configured in GA4
-- Ã¢Å“â€œ IP exclusion set (internal traffic)
-- Ã¢Å“â€œ Timezone correct in property settings
-- Ã¢Å“â€œ Monthly reporting template created
+- ✓ GA4 property created and verified
+- ✓ Measurement ID added to website
+- ✓ GTM container installed (if applicable)
+- ✓ Key business events defined
+- ✓ UTM naming convention established
+- ✓ Email/ad campaigns using UTM parameters
+- ✓ Conversion goals configured in GA4
+- ✓ IP exclusion set (internal traffic)
+- ✓ Timezone correct in property settings
+- ✓ Monthly reporting template created
 
 Start tracking today. You can't optimize what you don't measure.

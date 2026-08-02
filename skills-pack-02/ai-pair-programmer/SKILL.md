@@ -1,8 +1,6 @@
 ---
-name: ai-pair-programmer
+skill_name: ai-pair-programmer
 description: Complete AI-assisted development workflow including planning, implementation, testing, review loops, and handoff patterns
-source_group: skills
-imported_from: ai-pair-programmer.md
 category: AI & Claude Code Mastery
 version: 1.0.0
 ---
@@ -24,7 +22,7 @@ With AI pairing:
 - **You (Driver)**: Make decisions, understand code, write tests, review
 - **Claude Code (Navigator)**: Write code, suggest patterns, refactor, explain
 
-This is asymmetricalÃ¢â‚¬â€you always maintain decision authority.
+This is asymmetrical—you always maintain decision authority.
 
 ### Pairing Protocols
 
@@ -137,7 +135,7 @@ export async function saveTemplate(data: TemplateInput) {
   const template = await db.template.create({
     data: {
       ...data,
-      userId: getCurrentUser().id  // Ã¢â€ Â ASSUMPTION: What if user not authenticated?
+      userId: getCurrentUser().id  // ← ASSUMPTION: What if user not authenticated?
     }
   });
   return template;
@@ -146,7 +144,7 @@ export async function saveTemplate(data: TemplateInput) {
 
 **Question the assumption**:
 ```
-Ã¢Å¡Â Ã¯Â¸Â What if getCurrentUser() returns null?
+⚠️ What if getCurrentUser() returns null?
 Should we throw an error? Return null? Let me see how you handle this.
 ```
 
@@ -162,7 +160,7 @@ export async function saveTemplate(data: TemplateInput, userId: string) {
 
 ### Pattern 3: Test-First Pairing
 
-Test Ã¢â€ â€™ Implementation Ã¢â€ â€™ Refinement
+Test → Implementation → Refinement
 
 **Step 1: Write test**
 ```
@@ -448,36 +446,36 @@ Questions? See CLAUDE.md or ask.
 
 ### Pitfall 1: Over-Reliance
 
-Ã¢ÂÅ’ "Just generate it all. I'll use it as-is."
-Ã¢Å“â€¦ "Generate it. I'll review, understand, and improve it."
+❌ "Just generate it all. I'll use it as-is."
+✅ "Generate it. I'll review, understand, and improve it."
 
 You must understand the code. If you don't, ask Claude to explain.
 
 ### Pitfall 2: Trusting Without Verification
 
-Ã¢ÂÅ’ "Claude said it's secure, so it must be"
-Ã¢Å“â€¦ "Claude generated it. Let me review the security implications."
+❌ "Claude said it's secure, so it must be"
+✅ "Claude generated it. Let me review the security implications."
 
 Security, performance, and architecture need human judgment.
 
 ### Pitfall 3: Insufficient Testing
 
-Ã¢ÂÅ’ "Unit tests are enough"
-Ã¢Å“â€¦ "Unit tests + integration tests + manual testing"
+❌ "Unit tests are enough"
+✅ "Unit tests + integration tests + manual testing"
 
 AI-generated code deserves skeptical testing.
 
 ### Pitfall 4: Poor Communication
 
-Ã¢ÂÅ’ Vague requests: "Fix this"
-Ã¢Å“â€¦ Clear requests: "Refactor this function to use early returns and reduce nesting"
+❌ Vague requests: "Fix this"
+✅ Clear requests: "Refactor this function to use early returns and reduce nesting"
 
 Good prompts get good code.
 
 ### Pitfall 5: Ignoring Context
 
-Ã¢ÂÅ’ Asking Claude the same thing every session
-Ã¢Å“â€¦ Maintaining CLAUDE.md so Claude remembers your patterns
+❌ Asking Claude the same thing every session
+✅ Maintaining CLAUDE.md so Claude remembers your patterns
 
 Context is cheap; hallucination is expensive.
 
@@ -561,15 +559,15 @@ Result: Architectural improvement
 
 ## Checklist: Pair Programmer Ready
 
-- Ã¢Å“â€œ Write plan before asking for code
-- Ã¢Å“â€œ Review every generated chunk
-- Ã¢Å“â€œ Test thoroughly (unit + integration)
-- Ã¢Å“â€œ Understand the code (ask if confused)
-- Ã¢Å“â€œ Maintain decision authority
-- Ã¢Å“â€œ Communicate clearly (detailed, not vague)
-- Ã¢Å“â€œ Use proper handoff patterns
-- Ã¢Å“â€œ Verify assumptions, don't assume
-- Ã¢Å“â€œ Keep CLAUDE.md updated
-- Ã¢Å“â€œ Aim for Level 3-4 maturity
+- ✓ Write plan before asking for code
+- ✓ Review every generated chunk
+- ✓ Test thoroughly (unit + integration)
+- ✓ Understand the code (ask if confused)
+- ✓ Maintain decision authority
+- ✓ Communicate clearly (detailed, not vague)
+- ✓ Use proper handoff patterns
+- ✓ Verify assumptions, don't assume
+- ✓ Keep CLAUDE.md updated
+- ✓ Aim for Level 3-4 maturity
 
 Effective AI pairing feels like working with a thoughtful colleague who's always available and infinitely patient.

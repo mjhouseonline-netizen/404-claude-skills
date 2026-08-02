@@ -1,8 +1,6 @@
 ---
-name: ai-agent-debugger
+skill_name: ai-agent-debugger
 description: Debug agent loops by detecting infinite loops, hallucination patterns, cost runaway, token waste, and context degradation
-source_group: skills
-imported_from: ai-agent-debugger.md
 category: AI & Claude Code Mastery
 version: 1.0.0
 ---
@@ -62,7 +60,7 @@ Result: Entire feature is fabricated
 **Fix**:
 ```typescript
 async function verifyBeforeBuilding(claim: string): boolean {
-  // Don't just trust the agentÃ¢â‚¬â€verify
+  // Don't just trust the agent—verify
   const checks = [
     methodExists(claim), // Does this method exist?
     syntaxValid(claim),  // Is syntax correct?
@@ -97,10 +95,10 @@ async function buildWithVerification(feature: string) {
 **Symptom**: Token usage spirals out of control
 
 ```
-Request 1: 1,000 tokens Ã¢â€ â€™ $0.01
-Request 2: 5,000 tokens Ã¢â€ â€™ $0.05
-Request 3: 50,000 tokens Ã¢â€ â€™ $0.50
-Request 4: 100,000 tokens Ã¢â€ â€™ $1.00
+Request 1: 1,000 tokens → $0.01
+Request 2: 5,000 tokens → $0.05
+Request 3: 50,000 tokens → $0.50
+Request 4: 100,000 tokens → $1.00
 Total: $1.56 for a task that should cost $0.10
 ```
 
@@ -153,7 +151,7 @@ class BudgetedAgent {
 ```
 Iteration 1: "Create API endpoint using Express"
 Iteration 5: "Now create the same endpoint using FastAPI"
-Iteration 10: "I'll use plain HTTPÃ¢â‚¬â€no framework"
+Iteration 10: "I'll use plain HTTP—no framework"
 (Agent forgot original Express requirement)
 ```
 
@@ -186,7 +184,7 @@ class ContextPreserver {
 const agent = new ContextPreserver();
 agent.setSystemPrompt('You are building an Express API...');
 agent.addInvariant('Always use TypeScript strict mode');
-agent.addInvariant('Never use varÃ¢â‚¬â€only const/let');
+agent.addInvariant('Never use var—only const/let');
 agent.addInvariant('All API routes must validate input with Zod');
 
 // Every request includes these rules
@@ -223,10 +221,10 @@ class InstrumentedAgent {
         tokensUsed: countTokens(output)
       });
 
-      console.log(`[${action}] Ã¢Å“â€œ Completed in ${elapsed}ms`);
+      console.log(`[${action}] ✓ Completed in ${elapsed}ms`);
       return output;
     } catch (error) {
-      console.error(`[${action}] Ã¢Å“â€” Failed: ${error.message}`);
+      console.error(`[${action}] ✗ Failed: ${error.message}`);
       throw error;
     }
   }
@@ -265,7 +263,7 @@ class StatefulAgent {
 
       for (const key in prev) {
         if (typeof prev[key] === 'number' && curr[key] < prev[key]) {
-          console.warn(`[REGRESSION] ${key} decreased: ${prev[key]} Ã¢â€ â€™ ${curr[key]}`);
+          console.warn(`[REGRESSION] ${key} decreased: ${prev[key]} → ${curr[key]}`);
         }
       }
     }
@@ -531,15 +529,15 @@ async function executeWithHumanFallback(task: Task) {
 
 ## Checklist: Agent Debugger Ready
 
-- Ã¢Å“â€œ Recognize common failure modes (loops, hallucinations, runaway)
-- Ã¢Å“â€œ Add instrumentation (logging, state tracking, metrics)
-- Ã¢Å“â€œ Detect cost spirals before they happen
-- Ã¢Å“â€œ Verify agent claims against reality
-- Ã¢Å“â€œ Preserve context with system prompts and invariants
-- Ã¢Å“â€œ Run debugging checklist on failures
-- Ã¢Å“â€œ Use replay and analysis tools
-- Ã¢Å“â€œ Implement graceful degradation
-- Ã¢Å“â€œ Set up checkpoint recovery
-- Ã¢Å“â€œ Plan human fallback paths
+- ✓ Recognize common failure modes (loops, hallucinations, runaway)
+- ✓ Add instrumentation (logging, state tracking, metrics)
+- ✓ Detect cost spirals before they happen
+- ✓ Verify agent claims against reality
+- ✓ Preserve context with system prompts and invariants
+- ✓ Run debugging checklist on failures
+- ✓ Use replay and analysis tools
+- ✓ Implement graceful degradation
+- ✓ Set up checkpoint recovery
+- ✓ Plan human fallback paths
 
 Well-instrumented agents fail fast, cost less, and require fewer iterations to get right.

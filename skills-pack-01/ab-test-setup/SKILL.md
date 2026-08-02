@@ -1,9 +1,7 @@
 ---
 name: ab-test-setup
-description: When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," or "hypothesis." For tracking implementation, see analytics-tracking.
-source_group: skills
-imported_from: ab-test-setup.md
 version: 1.0.0
+description: When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions "A/B test," "split test," "experiment," "test this change," "variant copy," "multivariate test," or "hypothesis." For tracking implementation, see analytics-tracking.
 ---
 
 # A/B Test Setup
@@ -196,7 +194,7 @@ Looking at results before reaching sample size and stopping early leads to false
 ### Statistical Significance
 - 95% confidence = p-value < 0.05
 - Means <5% chance result is random
-- Not a guaranteeÃ¢â‚¬â€just a threshold
+- Not a guarantee—just a threshold
 
 ### Analysis Checklist
 
