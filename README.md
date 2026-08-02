@@ -1,10 +1,10 @@
 # Claude Skills Library
 
-A searchable Skill & Soul Studio library containing 404 reusable Claude skills.
+A searchable Skill & Soul Studio library containing 417 reusable Claude skills.
 
 The website lets visitors:
 
-- search all 404 skills by name, task, description, or topic
+- search all 417 skills by name, task, description, or topic
 - filter skills by category
 - download one Claude-ready ZIP file at a time
 - review the source folder before installing
@@ -22,8 +22,8 @@ The website lets visitors:
 ## Repository structure
 
 - `app/`: website interface and generated skill metadata
-- `public/downloads/`: 404 individual skill ZIP files
-- `skills-pack-01` through `skills-pack-08`: source skill folders
+- `public/downloads/`: generated individual skill ZIP files
+- `skills-pack-01` through `skills-pack-09`: source skill folders
 - `scripts/build-skill-library.mjs`: rebuilds metadata and ZIP downloads from the source folders
 
 ## Run locally
