@@ -1,8 +1,6 @@
 ---
-name: ai-product-builder
+skill_name: ai-product-builder
 description: Build AI-powered products with architecture patterns, evaluation frameworks, and safety practices
-source_group: skills
-imported_from: ai-product-builder.md
 category: AI & LLM
 version: 1.0.0
 ---
@@ -20,7 +18,7 @@ This skill teaches how to design, build, and deploy AI-powered products. Learn a
 **Key challenge:** Staying in domain, accurate answers
 
 ```
-User Input Ã¢â€ â€™ Retrieve context (optional) Ã¢â€ â€™ LLM Ã¢â€ â€™ Response
+User Input → Retrieve context (optional) → LLM → Response
 ```
 
 ### Type 2: Copilot (Autocomplete)
@@ -36,7 +34,7 @@ User Input Ã¢â€ â€™ Retrieve context (optional) Ã¢â€ â€™ L
 **Key challenge:** Avoiding infinite loops, tool safety
 
 ```
-Goal Ã¢â€ â€™ LLM (choose tool) Ã¢â€ â€™ Execute tool Ã¢â€ â€™ Update state Ã¢â€ â€™ Loop until done
+Goal → LLM (choose tool) → Execute tool → Update state → Loop until done
 ```
 
 ### Type 4: Data Pipeline / Batch
@@ -69,10 +67,10 @@ const response = await claude.message({
 ### Pattern 2: Retrieval-Augmented Generation (RAG)
 
 ```
-User Query Ã¢â€ â€™ Search Knowledge Base Ã¢â€ â€™ Retrieve relevant docs
-                          Ã¢â€ â€œ
+User Query → Search Knowledge Base → Retrieve relevant docs
+                          ↓
                     LLM (with context)
-                          Ã¢â€ â€œ
+                          ↓
                        Response
 ```
 
@@ -104,7 +102,7 @@ async function ragResponse(userQuery: string) {
 ### Pattern 3: Tool-Calling Agents
 
 ```
-LLM analyzes request Ã¢â€ â€™ Chooses best tool(s) Ã¢â€ â€™ Execute Ã¢â€ â€™ Loop
+LLM analyzes request → Chooses best tool(s) → Execute → Loop
 ```
 
 **Example: Research Agent**
@@ -279,15 +277,15 @@ interface EvalResult {
 
 ```
 prompts/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ v1/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ system.md
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ examples.md
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ metadata.json (model, temperature, max_tokens)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ v2/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ system.md
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ metadata.json
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ v3/
-    Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ system.md (current)
+├── v1/
+│   ├── system.md
+│   ├── examples.md
+│   └── metadata.json (model, temperature, max_tokens)
+├── v2/
+│   ├── system.md
+│   └── metadata.json
+└── v3/
+    └── system.md (current)
 ```
 
 **metadata.json:**
@@ -539,16 +537,16 @@ async function checkDailyCostBudget() {
 
 ## Part 8: Deployment Checklist
 
-- Ã¢Å“â€œ Evaluated on test set (>30 examples)
-- Ã¢Å“â€œ Latency acceptable for use case
-- Ã¢Å“â€œ Cost per inference calculated
-- Ã¢Å“â€œ Error handling implemented
-- Ã¢Å“â€œ Fallback behavior defined
-- Ã¢Å“â€œ Output validation in place
-- Ã¢Å“â€œ Monitoring dashboards set up
-- Ã¢Å“â€œ Cost alerts configured
-- Ã¢Å“â€œ User feedback collection active
-- Ã¢Å“â€œ Rate limiting implemented
-- Ã¢Å“â€œ Audit logging enabled
+- ✓ Evaluated on test set (>30 examples)
+- ✓ Latency acceptable for use case
+- ✓ Cost per inference calculated
+- ✓ Error handling implemented
+- ✓ Fallback behavior defined
+- ✓ Output validation in place
+- ✓ Monitoring dashboards set up
+- ✓ Cost alerts configured
+- ✓ User feedback collection active
+- ✓ Rate limiting implemented
+- ✓ Audit logging enabled
 
 AI products need care and feeding. Monitor continuously.
