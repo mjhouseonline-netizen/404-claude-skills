@@ -1,8 +1,6 @@
 ---
 name: acquisition-channel-advisor
 description: Evaluate acquisition channels using unit economics, customer quality, and scalability. Recommends scale/test/kill decisions.
-source_group: skills
-imported_from: acquisition-channel-advisor.md
 type: interactive
 ---
 
@@ -11,7 +9,7 @@ type: interactive
 
 Guide product managers through evaluating whether to scale, test, or kill an acquisition channel based on unit economics (CAC, LTV, payback), customer quality (retention, NRR), and scalability (magic number, volume potential). Use this to make data-driven go-to-market decisions and optimize channel mix for sustainable growth.
 
-This is not a channel strategy frameworkÃ¢â‚¬â€it's a financial lens for channel evaluation that helps you avoid scaling unprofitable channels or killing channels with fixable problems. Use when deciding how to allocate marketing budget across channels.
+This is not a channel strategy framework—it's a financial lens for channel evaluation that helps you avoid scaling unprofitable channels or killing channels with fixable problems. Use when deciding how to allocate marketing budget across channels.
 
 ## Key Concepts
 
@@ -19,25 +17,25 @@ This is not a channel strategy frameworkÃ¢â‚¬â€it's a financial lens 
 
 A systematic approach to evaluate acquisition channels:
 
-1. **Unit Economics** Ã¢â‚¬â€ What does it cost to acquire, and what's the return?
+1. **Unit Economics** — What does it cost to acquire, and what's the return?
    - CAC (Customer Acquisition Cost)
    - LTV (Lifetime Value)
    - LTV:CAC ratio
    - Payback period
 
-2. **Customer Quality** Ã¢â‚¬â€ Do customers from this channel stick around and expand?
+2. **Customer Quality** — Do customers from this channel stick around and expand?
    - Cohort retention rate (by channel)
    - Churn rate (by channel)
    - NRR (Net Revenue Retention by channel)
    - Expansion rate
 
-3. **Scalability** Ã¢â‚¬â€ Can this channel sustain growth at the volume you need?
+3. **Scalability** — Can this channel sustain growth at the volume you need?
    - Magic Number (S&M efficiency)
    - Addressable volume (TAM of channel)
    - Saturation risk (diminishing returns)
    - CAC trend (increasing, stable, decreasing)
 
-4. **Strategic Fit** Ã¢â‚¬â€ Does this channel align with your go-to-market strategy?
+4. **Strategic Fit** — Does this channel align with your go-to-market strategy?
    - Customer segment match (SMB vs. enterprise)
    - Sales motion compatibility (PLG vs. sales-led)
    - Brand positioning alignment
@@ -67,7 +65,7 @@ A systematic approach to evaluate acquisition channels:
 - Planning annual marketing budget allocation
 
 **Don't use this when:**
-- Channel is brand-new (<3 months, <100 customers) Ã¢â‚¬â€ not enough data
+- Channel is brand-new (<3 months, <100 customers) — not enough data
 - You're testing channel fit (this is for evaluation, not experimentation)
 - Strategic channels (e.g., enterprises require field sales regardless of CAC)
 - You don't have channel-level data (need to track CAC, retention by source)
@@ -145,7 +143,7 @@ CAC = Monthly Spend / Customers Acquired per Month
    - Unknown (need to analyze cohort data)
 
 2. **What's the payback period for this channel?**
-   - We can calculate: CAC / (Monthly ARPU Ãƒâ€” Gross Margin %)
+   - We can calculate: CAC / (Monthly ARPU × Gross Margin %)
    - Or you can provide it"
 
 **Based on answers, agent calculates:**
@@ -154,9 +152,9 @@ CAC = Monthly Spend / Customers Acquired per Month
 - Comparison to blended metrics
 
 **Agent flags:**
-- Ã¢Å“â€¦ If LTV:CAC >3:1 and payback <12 months: "Strong unit economics"
-- Ã¢Å¡Â Ã¯Â¸Â If LTV:CAC 2-3:1 or payback 12-18 months: "Marginal unit economics"
-- Ã°Å¸Å¡Â¨ If LTV:CAC <2:1 or payback >18 months: "Poor unit economics"
+- ✅ If LTV:CAC >3:1 and payback <12 months: "Strong unit economics"
+- ⚠️ If LTV:CAC 2-3:1 or payback 12-18 months: "Marginal unit economics"
+- 🚨 If LTV:CAC <2:1 or payback >18 months: "Poor unit economics"
 
 ---
 
@@ -181,19 +179,19 @@ CAC = Monthly Spend / Customers Acquired per Month
    - Unknown (need cohort analysis)
 
 3. **What's the customer profile from this channel?**
-   - Ideal customer profile (ICP) Ã¢â‚¬â€ perfect fit
-   - Close to ICP Ã¢â‚¬â€ mostly good fit
-   - Off ICP Ã¢â‚¬â€ many poor-fit customers
+   - Ideal customer profile (ICP) — perfect fit
+   - Close to ICP — mostly good fit
+   - Off ICP — many poor-fit customers
    - Unknown"
 
 **Based on answers, agent evaluates:**
-- Ã¢Å“â€¦ **High quality:** Lower churn, higher NRR, ICP match
-- Ã¢Å¡Â Ã¯Â¸Â **Medium quality:** Similar to blended, mostly good fit
-- Ã°Å¸Å¡Â¨ **Low quality:** Higher churn, lower NRR, off ICP
+- ✅ **High quality:** Lower churn, higher NRR, ICP match
+- ⚠️ **Medium quality:** Similar to blended, mostly good fit
+- 🚨 **Low quality:** Higher churn, lower NRR, off ICP
 
 **Agent flags:**
-- If high quality: "Premium channelÃ¢â‚¬â€customers are better than average"
-- If low quality: "Quality problemÃ¢â‚¬â€customers aren't sticking or expanding"
+- If high quality: "Premium channel—customers are better than average"
+- If low quality: "Quality problem—customers aren't sticking or expanding"
 
 ---
 
@@ -206,7 +204,7 @@ CAC = Monthly Spend / Customers Acquired per Month
 **Efficiency & Volume:**
 
 1. **What's the S&M efficiency for this channel (Magic Number)?**
-   - Calculate: (New MRR from channel Ãƒâ€” 4) / Channel S&M Spend
+   - Calculate: (New MRR from channel × 4) / Channel S&M Spend
    - Or provide if known
 
 2. **What's the addressable volume for this channel?**
@@ -225,9 +223,9 @@ CAC = Monthly Spend / Customers Acquired per Month
    - We'll calculate: Target growth - expansion/retention growth = acquisition gap"
 
 **Based on answers, agent evaluates:**
-- Ã¢Å“â€¦ **Highly scalable:** Magic number >0.75, large volume, stable/decreasing CAC
-- Ã¢Å¡Â Ã¯Â¸Â **Moderately scalable:** Magic number 0.5-0.75, medium volume, stable CAC
-- Ã°Å¸Å¡Â¨ **Not scalable:** Magic number <0.5, small volume, increasing CAC
+- ✅ **Highly scalable:** Magic number >0.75, large volume, stable/decreasing CAC
+- ⚠️ **Moderately scalable:** Magic number 0.5-0.75, medium volume, stable CAC
+- 🚨 **Not scalable:** Magic number <0.5, small volume, increasing CAC
 
 ---
 
@@ -254,13 +252,13 @@ CAC = Monthly Spend / Customers Acquired per Month
 
 **Recommendation:**
 
-"**Scale this channel aggressively** Ã¢â‚¬â€ Excellent economics + scalability
+"**Scale this channel aggressively** — Excellent economics + scalability
 
 **Unit Economics:**
 - CAC: $___
 - LTV: $___
-- LTV:CAC: ___:1 Ã¢Å“â€¦ (>3:1 threshold)
-- Payback: ___ months Ã¢Å“â€¦ (<12 months)
+- LTV:CAC: ___:1 ✅ (>3:1 threshold)
+- Payback: ___ months ✅ (<12 months)
 
 **Customer Quality:**
 - Retention: [Better than / Same as / Worse than] blended
@@ -268,7 +266,7 @@ CAC = Monthly Spend / Customers Acquired per Month
 - ICP Fit: [High / Medium / Low]
 
 **Scalability:**
-- Magic Number: ___ Ã¢Å“â€¦ (>0.75 = efficient)
+- Magic Number: ___ ✅ (>0.75 = efficient)
 - Addressable Volume: Large
 - CAC Trend: [Stable / Decreasing]
 
@@ -280,7 +278,7 @@ CAC = Monthly Spend / Customers Acquired per Month
 
 **How to scale:**
 1. **Increase budget by 50-100% next month**
-   - Current: $___ /month Ã¢â€ â€™ Target: $___ /month
+   - Current: $___ /month → Target: $___ /month
 2. **Monitor key metrics weekly:**
    - CAC (should stay <$___)
    - Magic Number (should stay >0.75)
@@ -310,14 +308,14 @@ CAC = Monthly Spend / Customers Acquired per Month
 
 **Recommendation:**
 
-"**Test & optimize before scaling** Ã¢â‚¬â€ Marginal economics, fixable
+"**Test & optimize before scaling** — Marginal economics, fixable
 
 **Current State:**
 - CAC: $___
 - LTV: $___
-- LTV:CAC: ___:1 Ã¢Å¡Â Ã¯Â¸Â (2-3:1 = marginal)
-- Payback: ___ months Ã¢Å¡Â Ã¯Â¸Â (12-18 months)
-- Magic Number: ___ Ã¢Å¡Â Ã¯Â¸Â (0.5-0.75 = acceptable, not great)
+- LTV:CAC: ___:1 ⚠️ (2-3:1 = marginal)
+- Payback: ___ months ⚠️ (12-18 months)
+- Magic Number: ___ ⚠️ (0.5-0.75 = acceptable, not great)
 
 **Customer Quality:**
 - Retention: [Same as blended / Slightly worse]
@@ -367,13 +365,13 @@ CAC = Monthly Spend / Customers Acquired per Month
 
 **Recommendation:**
 
-"**Kill this channel (or pause)** Ã¢â‚¬â€ Economics don't support investment
+"**Kill this channel (or pause)** — Economics don't support investment
 
 **Why:**
 - CAC: $___
 - LTV: $___
-- LTV:CAC: ___:1 Ã°Å¸Å¡Â¨ (<2:1 = unsustainable)
-- Payback: ___ months Ã°Å¸Å¡Â¨ (>18 months = cash trap)
+- LTV:CAC: ___:1 🚨 (<2:1 = unsustainable)
+- Payback: ___ months 🚨 (>18 months = cash trap)
 
 **Problem:**
 - You're spending $___ to acquire a customer worth $___
@@ -425,7 +423,7 @@ CAC = Monthly Spend / Customers Acquired per Month
 
 **Recommendation:**
 
-"**Continue, but cap investment** Ã¢â‚¬â€ Strategic value > short-term ROI
+"**Continue, but cap investment** — Strategic value > short-term ROI
 
 **Financial Reality:**
 - CAC: $___
@@ -439,10 +437,10 @@ CAC = Monthly Spend / Customers Acquired per Month
 - [Market positioning: e.g., "Need to be present in this channel for credibility"]
 
 **How to manage:**
-1. **Cap spend** Ã¢â‚¬â€ Don't scale until economics improve
+1. **Cap spend** — Don't scale until economics improve
    - Current: $___/month
    - Cap at: $___/month (hold steady)
-2. **Track leading indicators** Ã¢â‚¬â€ Don't just look at short-term CAC/LTV
+2. **Track leading indicators** — Don't just look at short-term CAC/LTV
    - Pipeline influence
    - Brand awareness lift
    - Referral rate from this channel
@@ -618,15 +616,15 @@ See `examples/` folder for sample conversation flows. Mini examples below:
 ## References
 
 ### Related Skills
-- `saas-economics-efficiency-metrics` Ã¢â‚¬â€ CAC, LTV, payback, magic number calculations
-- `saas-revenue-growth-metrics` Ã¢â‚¬â€ NRR, churn, cohort analysis by channel
-- `finance-metrics-quickref` Ã¢â‚¬â€ Fast lookup for channel evaluation metrics
-- `feature-investment-advisor` Ã¢â‚¬â€ Similar ROI framework for feature decisions
-- `business-health-diagnostic` Ã¢â‚¬â€ Broader business health assessment
+- `saas-economics-efficiency-metrics` — CAC, LTV, payback, magic number calculations
+- `saas-revenue-growth-metrics` — NRR, churn, cohort analysis by channel
+- `finance-metrics-quickref` — Fast lookup for channel evaluation metrics
+- `feature-investment-advisor` — Similar ROI framework for feature decisions
+- `business-health-diagnostic` — Broader business health assessment
 
 ### External Frameworks
 - **Brian Balfour (Reforge):** Channel-product fit framework
-- **David Skok:** "SaaS Metrics" Ã¢â‚¬â€ CAC, LTV, and payback for channels
+- **David Skok:** "SaaS Metrics" — CAC, LTV, and payback for channels
 - **Tomasz Tunguz:** SaaS channel benchmarking
 - **First Round Review:** "How to Find and Scale Your Growth Channels"
 
